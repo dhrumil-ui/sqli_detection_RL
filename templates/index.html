@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/cybersecurity_img.webp')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>SQL Injection Detection</h2>
+        <form method='post' action='/sqli_detection' novalidate>
+            <div class="user-box">
+                <input type="text" id="sqlquery" name="sqlquery" value="{{query}}" >
+                <label for="sqlquery">Type Your Query Here</label>
+            </div>
+            <button id="a">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Check the Query
+            </button>
+        </form>
+        <p>{{res}}</p><hr><br>
+        <div style = "text-align: right">secured by <b>SQLi_ARMOR</b></div>
+    </div>
+</body>
+
+</html>
