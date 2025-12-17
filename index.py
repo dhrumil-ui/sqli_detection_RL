@@ -48,9 +48,8 @@ svm_classifier.fit(feature_train, y_train)
 y_pred = svm_classifier.predict(feature_test)
 # Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred) * 100
-# count=0
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3307/major'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost:3307/major'
 db = SQLAlchemy(app)
 app.secret_key = 'super-secret-key' 
 
